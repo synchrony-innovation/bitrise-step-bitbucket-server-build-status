@@ -64,7 +64,7 @@ toolkit:
 
 
 inputs:
-  - state:
+  - state: INPROGRESS
     title: Build State
     opts:
       is_required: true
