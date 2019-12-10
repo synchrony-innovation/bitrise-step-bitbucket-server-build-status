@@ -62,10 +62,9 @@ toolkit:
   bash:
     entry_file: step.sh
 
-## REMOVED inputs since we can use BITRISE_BUILD_STATUS to determine the state dynamically
-#inputs:
-#  - state: INPROGRESS
-#    title: Build State
-#    opts:
-#      is_required: true
-#      value_options: ["FAILED", "INPROGRESS", "SUCCESSFUL"]
+inputs:
+  - bitbucket_status_update_base_url:
+    title: Bitbucket status update base URL
+    opts:
+      is_expand: true
+      is_required: true
