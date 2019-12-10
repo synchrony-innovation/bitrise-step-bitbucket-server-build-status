@@ -63,8 +63,8 @@ toolkit:
     entry_file: step.sh
 
 inputs:
-  - bitbucket_status_update_base_url:
-    title: Bitbucket status update base URL
+  - bitbucket_base_url:
+    title: Bitbucket base URL
     opts:
       is_expand: true
       is_required: true
