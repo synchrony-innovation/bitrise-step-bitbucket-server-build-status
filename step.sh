@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## input: bitbucket_base_url - is the base url for the bitbucket build-status update post.
+
 ## STATE can be "FAILED", "INPROGRESS" or "SUCCESSFUL"
 
 ## BITRISE_BUILD_STATUS
@@ -26,7 +28,7 @@ case $BITRISE_BUILD_STATUS in
 esac
 
 ## Request
-curl -X "POST" "https://bitbucket-dev.glb.syfbank.com/rest/build-status/1.0/commits/${BITRISE_GIT_COMMIT}" \
+curl -X "POST" "${bitbucket_base_url}/rest/build-status/1.0/commits/${BITRISE_GIT_COMMIT}" \
 -H 'Content-Type: application/json' \
 -d $'{
 "state": "${STATE}",
